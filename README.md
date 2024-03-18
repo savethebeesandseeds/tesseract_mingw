@@ -41,6 +41,10 @@ I try building TIFF to solve it, but i cound't.
 Open CMD and type these commands:
 
     cd /path/to/project
+    
+    git clone https://github.com/savethebeesandseeds/tesseract_mingw
+
+    cd /tesseract_mingw
 
     docker pull debian:11
 
@@ -56,11 +60,10 @@ Now you are no longer in Windows, but inside a Linux Docker. Type these commands
 
     apt install --reinstall ca-certificates --no-install-recommends -y
 
-    mkdir /external
+    mkdir /external && cd /external
+
 
 ## Download mingw-std-threads (as MinGW does not support linux threads)
-
-    cd /external
 
     git clone https://github.com/meganz/mingw-std-threads
 
